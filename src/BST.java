@@ -1,6 +1,11 @@
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
-    private TreeNode<E> root;
-    private int size = 0;
+    TreeNode<E> root;
+    int size = 0;
 
     /**
      * Create a default binary tree
@@ -11,7 +16,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     /**
      * Create a binary tree from an array of objects
      */
-    BST(E[] objects) {
+    BST(@NotNull E[] objects) {
         for (E element : objects)
             insert(element);
     }
@@ -70,7 +75,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         return true; // Element inserted successfully
     }
 
-    private TreeNode<E> createNewNode(E e) {
+    TreeNode<E> createNewNode(E e) {
         return new TreeNode<E>(e);
     }
 
@@ -164,9 +169,8 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     /**
      * Returns a path from the root leading to the specified element
      */
-    java.util.ArrayList<TreeNode<E>> path(E e) {
-        java.util.ArrayList<TreeNode<E>> list =
-                new java.util.ArrayList<TreeNode<E>>();
+    ArrayList<TreeNode<E>> path(E e) {
+        ArrayList<TreeNode<E>> list = new ArrayList<TreeNode<E>>();
         TreeNode<E> current = root; // Start from the root
 
         while (current != null) {
@@ -250,7 +254,8 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
      * Obtain an iterator. Use inorder.
      */
     @Override
-    public java.util.Iterator<E> iterator() {
+    public @NotNull
+    Iterator<E> iterator() {
         return new InorderIterator();
     }
 

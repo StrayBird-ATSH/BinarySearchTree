@@ -3,22 +3,22 @@ public abstract class AbstractTree<E> implements Tree<E> {
      * Inorder traversal from the root
      */
     @Override
-    public void inorder() {
-    }
+    abstract public void inorder();
+
 
     /**
      * Postorder traversal from the root
      */
     @Override
-    public void postorder() {
-    }
+    abstract public void postorder();
+
 
     /**
      * Preorder traversal from the root
      */
     @Override
-    public void preorder() {
-    }
+    abstract public void preorder();
+
 
     /**
      * Return true if the tree is empty
