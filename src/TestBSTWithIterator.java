@@ -8,7 +8,6 @@ public class TestBSTWithIterator {
         tree.insert("Jones");
         tree.insert("Peter");
         tree.insert("Daniel");
-
         for (String s : tree)
             System.out.print(s.toUpperCase() + " ");
     }

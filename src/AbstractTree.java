@@ -1,18 +1,30 @@
 public abstract class AbstractTree<E> implements Tree<E> {
-  @Override /** Inorder traversal from the root*/
-  public void inorder() {
-  }
+    /**
+     * Inorder traversal from the root
+     */
+    @Override
+    public void inorder() {
+    }
 
-  @Override /** Postorder traversal from the root */
-  public void postorder() {
-  }
+    /**
+     * Postorder traversal from the root
+     */
+    @Override
+    public void postorder() {
+    }
 
-  @Override /** Preorder traversal from the root */
-  public void preorder() {
-  }
+    /**
+     * Preorder traversal from the root
+     */
+    @Override
+    public void preorder() {
+    }
 
-  @Override /** Return true if the tree is empty */
-  public boolean isEmpty() {
-    return getSize() == 0;
-  }
+    /**
+     * Return true if the tree is empty
+     */
+    @Override
+    public boolean isEmpty() {
+        return getSize() == 0;
+    }
 }
