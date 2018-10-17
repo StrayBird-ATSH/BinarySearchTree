@@ -37,7 +37,6 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
             } else // element matches current.element
                 return true; // Element is found
         }
-
         return false;
     }
 
@@ -260,10 +259,9 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     }
 
     // Inner class InorderIterator
-    private class InorderIterator implements java.util.Iterator<E> {
+    private class InorderIterator implements Iterator<E> {
         // Store the elements in a list
-        private java.util.ArrayList<E> list =
-                new java.util.ArrayList<E>();
+        private ArrayList<E> list = new ArrayList<E>();
         private int current = 0; // Point to the current element in list
 
         InorderIterator() {
